@@ -25,5 +25,6 @@ int		pop(t_linkedlist **stack);
 int		peek(t_linkedlist **stack);
 void	swap(t_linkedlist **stack);
 void	move(t_linkedlist **from, t_linkedlist **to);
+void	ft_putendl_fd(char *s, int fd);
 
 #endif
