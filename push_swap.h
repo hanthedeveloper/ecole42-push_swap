@@ -6,7 +6,7 @@
 /*   By: haincel <haincel@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/08 14:33:32 by haincel           #+#    #+#             */
-/*   Updated: 2026/09/08 14:40:13 by haincel          ###   ########.fr       */
+/*   Updated: 2026/09/08 15:56:59 by haincel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,7 @@ typedef struct s_linkedlist
 }	t_linkedlist;
 
 void	push(int data, t_linkedlist *stack);
+int		pop(t_linkedlist **stack);
+int		peek(t_linkedlist **stack);
 
 #endif
