@@ -13,4 +13,6 @@
 #ifndef ALGORITHM_H
 # define ALGORITHM_H
 
+void	selection_sort(t_linkedlist **a, t_linkedlist **b);
+
 #endif
