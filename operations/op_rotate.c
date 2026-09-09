@@ -12,7 +12,7 @@
 
 #include "operations.h"
 
-void	rotate(t_linkedlist **stack)
+static void	rotate(t_linkedlist **stack)
 {
 	if (!stack || !*stack || (*stack)->next == *stack)
 		return ;
