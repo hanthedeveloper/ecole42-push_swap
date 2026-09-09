@@ -12,7 +12,7 @@
 
 #include "operations.h"
 
-void	reverse_rotate(t_linkedlist **stack)
+static void	reverse_rotate(t_linkedlist **stack)
 {
 	if (!stack || !*stack || (*stack)->next == *stack)
 		return ;
