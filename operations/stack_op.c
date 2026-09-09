@@ -17,11 +17,12 @@
 
 /* push: stack data structer mantıgı dolayısıyla,
 cagırıldıgında verılen data ıle yenı node olusturarak
-verılen lınked lıstın sureklı basına ekleme yapar*/
+verılen lınked lıstın sureklı basına ekleme yapar.
+edit01: lısteyı cembersel yaptım headın prevı lıstenın sonu oluyor yanı */
 void	push(int data, t_linkedlist **stack)
 {
-
 	t_linkedlist	*newnode;
+	t_linkedlist	*tail;
 
 	if (!stack)
 		return ;
@@ -29,28 +30,45 @@ void	push(int data, t_linkedlist **stack)
 	if (!newnode)
 		return ;
 	newnode->data = data;
-	newnode->prev = NULL;
+	if (!*stack)
+	{
+		newnode->next = newnode;
+		newnode->prev = newnode;
+		*stack = newnode;
+		return ;
+	}
+	tail = (*stack)->prev;
 	newnode->next = *stack;
-	if (*stack)
-		(*stack)->prev = newnode;
+	newnode->prev = tail;
+	tail->next = newnode;
+	(*stack)->prev = newnode;
 	*stack = newnode;
 }
 
 /* lınked lıstın tepesındekı datanın stackten cıkarılması ıcındır.
 boylece yenı data bı alttakı olur.
-or: stack bası -> 1 2 3 4 poptan sonra stack bası -> 2 3 4 */
+or: stack bası -> 1 2 3 4 poptan sonra stack bası -> 2 3 4 
+edit01: bu da lıste cembersel oldugu ıcın edıtlendı */
 int	pop(t_linkedlist **stack)
 {
 	int				popdata;
 	t_linkedlist	*temp;
+	t_linkedlist	*tail;
 
 	if (!stack || !*stack)
 		return (0);
 	popdata = (*stack)->data;
 	temp = *stack;
+	if ((*stack)->next == *stack)
+	{
+		*stack = NULL;
+		free(temp);
+		return (popdata);
+	}
+	tail = (*stack)->prev;
 	*stack = temp->next;
-	if (*stack)
-		(*stack)->prev = NULL;
+	(*stack)->prev = tail;
+	tail->next = *stack;
 	free(temp);
 	return (popdata);
 }
@@ -59,6 +77,6 @@ int	pop(t_linkedlist **stack)
 int	peek(t_linkedlist **stack)
 {
 	if (!stack || !*stack)
-		return (0);
+		return (0); // burda da
 	return ((*stack)->data);
 }

@@ -10,6 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+
+// language ıle algorıtmanın kutuphanesını ayır
+
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
