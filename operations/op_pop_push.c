@@ -1,6 +1,16 @@
-// BU DA BITTI :D
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   op_pop_push.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: haincel <haincel@student.42istanbul.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/09/09 11:28:43 by haincel           #+#    #+#             */
+/*   Updated: 2026/09/09 11:28:43 by haincel          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include "push_swap.h"
+#include "operations.h"
 
 /* pop the first element at the top of the first given stack called "from",
 and push it at the top of the second stack called "to".

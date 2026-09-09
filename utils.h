@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   utils.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: haincel <haincel@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/08 14:33:32 by haincel           #+#    #+#             */
-/*   Updated: 2026/09/09 11:35:31 by haincel          ###   ########.fr       */
+/*   Created: 2026/09/09 11:23:33 by haincel           #+#    #+#             */
+/*   Updated: 2026/09/09 11:35:46 by haincel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#ifndef UTILS_H
+# define UTILS_H
 
-#include "operations.h"
-#include "algorithm.h"
-#include "utils.h"
+typedef struct s_linkedlist
+{
+	int					data;
+	struct s_linkedlist	*next;
+	struct s_linkedlist	*prev;
+}	t_linkedlist;
+
+void	ft_putendl_fd(char *s, int fd);
 
 #endif

@@ -6,13 +6,11 @@
 /*   By: haincel <haincel@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/08 14:37:55 by haincel           #+#    #+#             */
-/*   Updated: 2026/09/08 15:56:45 by haincel          ###   ########.fr       */
+/*   Updated: 2026/09/09 11:29:00 by haincel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// BU ZATEN BITMISTI :D
-
-#include "push_swap.h"
+#include "operations.h"
 #include <stdlib.h>
 
 /* push: stack data structer mantıgı dolayısıyla,

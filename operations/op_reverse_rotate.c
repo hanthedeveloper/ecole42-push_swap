@@ -1,7 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   op_reverse_rotate.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: haincel <haincel@student.42istanbul.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/09/09 11:28:08 by haincel           #+#    #+#             */
+/*   Updated: 2026/09/09 11:28:08 by haincel          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-// BITTI 
-
-#include "push_swap.h"
+#include "operations.h"
 
 void	reverse_rotate(t_linkedlist **stack)
 {
