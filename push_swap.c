@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: haincel <haincel@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/08 14:33:32 by haincel           #+#    #+#             */
-/*   Updated: 2026/09/10 13:39:18 by haincel          ###   ########.fr       */
+/*   Created: 2026/09/10 13:42:20 by haincel           #+#    #+#             */
+/*   Updated: 2026/09/10 13:42:43 by haincel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "push_swap.h"
 
-#include "operations.h"
-#include "algorithm.h"
-#include "utils.h"
-
-#include <stdlib.h>
-#include <unistd.h>
-
-#endif
+int main(int argc, char **argv)
+{
+	return (0);
+}

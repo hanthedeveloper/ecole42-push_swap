@@ -1,4 +1,31 @@
-radix sort with Least Significant Digit (LSD) : Introduction to Algorithms Third Edition
+EN SAGDAKI ELEMAN STACKIN TEPESI ya da duruma gore en usttekı tepe
+
+-----------------------------------------------------------------------------------------
+
+disorder hesaplama :
+Sıralı bir dizide, her sayı kendinden sonra gelen tüm sayılardan küçük olmalı. 
+Eğer bir sayı, kendisinden sonra gelen bir sayıdan büyükse, bu bir "hata" sayılır.
+gelen ınput arrayınde sırayla bı eleman secıp bu elemanı,
+kendisinden SONRA gelenlerle kıyaslıyorsun.
+
+toplam hata sayısı / eleman sayısının ıkılı kombınasyonu = disorder
+
+Low disorder: if disorder < 0.2, your chosen method must run in O(n^2) time.
+Medium√disorder: if 0.2 ≤ disorder < 0.5, your chosen method must run in
+O(n sqrtof n) time.
+High disorder: if disorder ≥ 0.5, your chosen method must run in O(n log n)
+time.
+
+-----------------------------------------------------------------------------------------
+
+adaptive olan algorıtma:
+disorder a gore bı algoruıtma secer. stack sıralı olmaya basladıgında, bellı bı sevıyeden
+sonra algorıtmayı devam ettırıp hız ve zaman kaybedıcegıne, daha az adımla bu ısı cozen
+bı algorıtma kullanmaya baslar.
+
+-----------------------------------------------------------------------------------------
+
+1 - radix sort with Least Significant Digit (LSD) : Introduction to Algorithms Third Edition
 by Thomas h. Cormen page 197
 
 10 elemanlı bı arrayın var.
@@ -23,4 +50,7 @@ sonra sırayla bu ındex arayından cıkarıyosun
 sımdı aynısını onlar basamagı ıcın yapıyosun.
 
 notlar: 2 array kurulur. arraylerın ındexlerıne nodelar konur boylece aynı rakama
-sahıp olan sayılar aynı ındexte durabılır. 
+sahıp olan sayılar aynı ındexte durabılır.
+
+https://medium.com/@eauzun/42-push-swap-projemde-radix-sort-lsd-ile-s%C4%B1ralama-algoritmas%C4%B1-659c6745ab3e
+
