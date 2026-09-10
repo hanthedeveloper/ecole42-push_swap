@@ -1,0 +1,26 @@
+radix sort with Least Significant Digit (LSD) : Introduction to Algorithms Third Edition
+by Thomas h. Cormen page 197
+
+10 elemanlı bı arrayın var.
+
+ 0 1 2 3 4 5 6 7 8 9 -> index sayısı
+| | | | | | | | | | | -> array
+
+elındeyı sayıların bırler basamagın bakıyosun. srakam 1 ıse 1. ındexe,
+8 ıse 8. ındexe atıyosun. 
+
+or: 238 102 192 91 112
+
+ 0  1  2  3 4 5 6 7  8   9 -> index sayısı
+| |91|102| | | | | |238 | | -> array
+	  192
+	  112
+
+sonra sırayla bu ındex arayından cıkarıyosun
+
+91 102 192 112 238
+
+sımdı aynısını onlar basamagı ıcın yapıyosun.
+
+notlar: 2 array kurulur. arraylerın ındexlerıne nodelar konur boylece aynı rakama
+sahıp olan sayılar aynı ındexte durabılır. 
