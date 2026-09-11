@@ -1,3 +1,12 @@
+!! 
+!! Bunun yerine genel/algoritmadan bağımsız bir çözüm öneririm:
+operasyonları direkt write/print etmek yerine bir buffer'a (dizi ya da linked list) yaz,
+sonra en sonda tek bir post-processing merge pass ile
+ardışık ra + rb çiftlerini rr'a, rra + rrb çiftlerini rrr'a indir.
+ra ve rb birbirinden bağımsız stack'leri etkilediği için sırası önemsiz 
+hangi algoritma üretirse üretsin bu pass her zaman güvenli ve kazançlı.
+
+-----------------------------------------------------------------------------------------
 EN SAGDAKI ELEMAN STACKIN TEPESI ya da duruma gore en usttekı tepe
 
 -----------------------------------------------------------------------------------------
