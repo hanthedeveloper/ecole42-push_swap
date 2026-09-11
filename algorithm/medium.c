@@ -1,20 +1,19 @@
 #include "operations.h"
-/*stackdeki index sayısını bulur*/
-static int	stack_size(t_linkedlist *stack)
+/* daıresel bı lınked lıstte kac node var onu donduruyor */
+static int	ft_lstsize(t_linkedlist *stack)
 {
 	int				size;
-	t_linkedlist	*head;
+	t_linkedlist	*temp;
 
 	if (!stack)
 		return (0);
-	head = stack;
-	size = 0;
-	do
+	temp = stack->next;
+	size = 1;
+	while (temp != stack)
 	{
 		size++;
-		stack = stack->next;
+		temp = temp->next;
 	}
-	while (stack != head);
 	return (size);
 }
 /*kaç tane chunk olabileceğini hesaplar*/
@@ -59,7 +58,7 @@ static void	push_max_to_a(t_linkedlist **a, t_linkedlist **b)
 	int	size;
 
 	max_pos = find_max_pos(*b);
-	size = stack_size(*b);
+	size = ft_lstsize(*b);
 
 	if (max_pos <= size / 2)
 	{
