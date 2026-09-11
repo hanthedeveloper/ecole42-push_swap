@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "operations.h"
-#include "utils.h"
 
 static void	sort(t_linkedlist **a, t_linkedlist **b, int index, int min_index)
 {

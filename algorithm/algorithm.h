@@ -13,6 +13,9 @@
 #ifndef ALGORITHM_H
 # define ALGORITHM_H
 
+#include "utils.h"
+
 void	selection_sort(t_linkedlist **a, t_linkedlist **b);
+void	chunk_sort(t_linkedlist **a, t_linkedlist **b);
 
 #endif

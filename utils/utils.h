@@ -10,22 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+// stacklerın kullandıgı linked list yapısı, yazdırma fonskıyonu, dısorder hesaplama
+
 #ifndef UTILS_H
 # define UTILS_H
 
 typedef struct s_linkedlist
 {
 	int					data;
+	int					index;
 	struct s_linkedlist	*next;
 	struct s_linkedlist	*prev;
 }	t_linkedlist;
 
-typedef struct s_stack
-{
-	int				data;
-	int				index;
-	struct s_stack	*next;
-}	t_stack;
 void	ft_putendl_fd(char *s, int fd);
+double	disorder_calculator(t_linkedlist *stack);
 
 #endif

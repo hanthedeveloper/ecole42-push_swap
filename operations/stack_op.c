@@ -14,7 +14,7 @@
 #include <stdlib.h>
 
 /* push: stack data structer mantıgı dolayısıyla,
-cagırıldıgında verılen data ıle yenı node olusturarak
+cagırıldıgında verılen data ıle !! yenı node olusturarak !!
 verılen lınked lıstın sureklı basına ekleme yapar.
 edit01: lısteyı cembersel yaptım headın prevı lıstenın sonu oluyor yanı */
 void	push(int data, t_linkedlist **stack)

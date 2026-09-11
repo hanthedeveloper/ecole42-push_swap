@@ -15,9 +15,5 @@
 
 #include "operations.h"
 #include "algorithm.h"
-#include "utils.h"
-
-#include <stdlib.h>
-#include <unistd.h>
 
 #endif
