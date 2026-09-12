@@ -1,25 +1,35 @@
-NAME	=
+NAME = push_swap
 
-CC		=	cc
-FLAGS	=	-Wall -Wextra -Werror
-RM		=	rm -f
+CC = cc
+FLAGS = -Wall -Wextra -Werror
+RM = rm -f
 
-SRC		=	
-OBJ		=	$(SRC:.c=.o)
+SRC = push_swap.c \
+	algorithm/medium.c \
+	algorithm/simple.c \
+	operations/op_pop_push.c \
+	operations/op_reverse_rotate.c \
+	operations/op_rotate.c \
+	operations/op_swap.c \
+	operations/stack_op.c \
+	utils/disorder_calculator.c \
+	utils/utils.c
+
+OBJ = $(SRC:.c=.o)
+
+all: $(NAME)
 
 $(NAME): $(OBJ)
-	ar rcs $(NAME) $(OBJ)
+	$(CC) $(FLAGS) $(OBJ) -o $(NAME)
 
 %.o: %.c
 	$(CC) $(FLAGS) -c $< -o $@
 
-all: $(NAME)
-
 clean:
-	$(RM) $(OBJ)
+	@$(RM) $(OBJ)
 
 fclean: clean
-	$(RM) $(NAME)
+	@$(RM) $(NAME)
 
 re: fclean all
 

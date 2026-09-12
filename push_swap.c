@@ -3,18 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: baaldirm <baaldirm@student.42istanbul.c    +#+  +:+       +#+        */
+/*   By: haincel <haincel@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/10 13:42:20 by haincel           #+#    #+#             */
-/*   Updated: 2026/09/10 16:55:14 by baaldirm         ###   ########.fr       */
+/*   Updated: 2026/09/12 11:24:37 by haincel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// main fonskıyonu, ınput ve flag kontrolu 
-
-int main(int argc, char **argv)
+int	main()
 {
-	return (0);
+	return 0;
 }

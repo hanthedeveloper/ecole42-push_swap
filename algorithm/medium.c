@@ -1,21 +1,17 @@
-#include "operations.h"
-/* daıresel bı lınked lıstte kac node var onu donduruyor */
-static int	ft_lstsize(t_linkedlist *stack)
-{
-	int				size;
-	t_linkedlist	*temp;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   medium.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: haincel <haincel@student.42istanbul.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/09/12 11:05:59 by haincel           #+#    #+#             */
+/*   Updated: 2026/09/12 11:26:00 by haincel          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-	if (!stack)
-		return (0);
-	temp = stack->next;
-	size = 1;
-	while (temp != stack)
-	{
-		size++;
-		temp = temp->next;
-	}
-	return (size);
-}
+#include "../operations/operations.h"
+
 /*kaç tane chunk olabileceğini hesaplar*/
 static int	ft_sqrt(int n)
 {
@@ -90,7 +86,7 @@ void	chunk_sort(t_linkedlist **a, t_linkedlist **b)
 	int	i;
 	int	size;
 
-	size = stack_size(*a);
+	size = ft_lstsize(*a);
 	chunk_size = ft_sqrt(size);
 	i = 0;
 	while (*a)

@@ -6,14 +6,14 @@
 /*   By: haincel <haincel@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/09 11:19:12 by haincel           #+#    #+#             */
-/*   Updated: 2026/09/09 11:33:06 by haincel          ###   ########.fr       */
+/*   Updated: 2026/09/12 11:23:21 by haincel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef OPERATIONS_H
 # define OPERATIONS_H
 
-#include "utils.h"
+#include "../utils/utils.h"
 
 void	push(int data, t_linkedlist **stack);
 int		pop(t_linkedlist **stack);
