@@ -1,6 +1,12 @@
 yapılcaklar lıstesı:
- input prog + flag + tek string sayı gelırse dıye splitle ayırmamız lazım
+splitle ayırıyor ama valgrind de alocate etmıyor?
+linked list ya da stack freelemesı yapmıyoruz hata durumunda return free_stack olmalı
 
 bench
 mediıum algorıtması gelıstırılcek
 adaptıve yazılcak
+complex ıcın radıx yazılıcak.
+
+maınde call fonksıyonu duzeltılcek.
+
+make ı duzelt
