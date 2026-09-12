@@ -1,4 +1,12 @@
 !! 
+
+flagsız calısıyo (hangı mod?)
+program + flag no cıktı error degıl 
+- da error verıyor
+bench cıktıyı nereye verıcek
+
+
+
 !! Bunun yerine genel/algoritmadan bağımsız bir çözüm öneririm:
 operasyonları direkt write/print etmek yerine bir buffer'a (dizi ya da linked list) yaz,
 sonra en sonda tek bir post-processing merge pass ile
@@ -64,4 +72,3 @@ notlar: 2 array kurulur. arraylerın ındexlerıne nodelar konur boylece aynı r
 sahıp olan sayılar aynı ındexte durabılır.
 
 https://medium.com/@eauzun/42-push-swap-projemde-radix-sort-lsd-ile-s%C4%B1ralama-algoritmas%C4%B1-659c6745ab3e
-
