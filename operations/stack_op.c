@@ -6,7 +6,7 @@
 /*   By: haincel <haincel@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/08 14:37:55 by haincel           #+#    #+#             */
-/*   Updated: 2026/09/09 11:29:00 by haincel          ###   ########.fr       */
+/*   Updated: 2026/09/12 14:23:00 by haincel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	push(int data, t_linkedlist **stack)
 		return ;
 	newnode = (t_linkedlist *)malloc(sizeof(t_linkedlist));
 	if (!newnode)
-		return ;
+		return ; // free stack cagır
 	newnode->data = data;
 	if (!*stack)
 	{

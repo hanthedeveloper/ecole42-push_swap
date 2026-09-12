@@ -6,7 +6,7 @@
 /*   By: haincel <haincel@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/09 11:41:07 by haincel           #+#    #+#             */
-/*   Updated: 2026/09/12 11:26:13 by haincel          ###   ########.fr       */
+/*   Updated: 2026/09/12 15:44:10 by haincel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,5 +70,7 @@ void	selection_sort(t_linkedlist **a, t_linkedlist **b)
 		sort(a, b, size, min_pos);
 	}
 	while (*b)
-		pa(a, b);
+	{
+		pa(b, a);
+	}
 }

@@ -1,0 +1,6 @@
+yapılcaklar lıstesı:
+ input prog + flag + tek string sayı gelırse dıye splitle ayırmamız lazım
+
+bench
+mediıum algorıtması gelıstırılcek
+adaptıve yazılcak

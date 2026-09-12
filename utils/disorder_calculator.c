@@ -24,24 +24,26 @@ static int	count_mistakes(t_linkedlist *head, int size, int *total_pairs)
 	mistakes = 0;
 	*total_pairs = 0;
 	i = 0;
-	while (i < size)
+	while (i < size) // bı node tutup,
 	{
 		j = i + 1;
 		temp = prev->next;
-		while (j < size)
+		while (j < size) // tum nodeları gezıcek
 		{
 			(*total_pairs)++;
-			if (prev->index > temp->index)
-				mistakes++;
+			if ((prev->data) > (temp->data)) // o ankı nodun datası oncekınden kucukse,
+				mistakes++; // hata vardır.
 			temp = temp->next;
 			j++;
 		}
 		prev = prev->next;
-		i++;
+		i++; // sonra dıger node ıcın aynısı
 	}
 	return (mistakes);
 }
 
+/* eger lınked lıst bossa ya da bı elemanlıysa dısorder 0.
+eger paır yoksa dısorder 0. hataların, toplam ıkılı sayısına bolumu = dısorder */
 double	disorder_calculator(t_linkedlist *stack)
 {
 	int	size;

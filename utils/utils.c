@@ -13,6 +13,12 @@
 #include <unistd.h>
 #include "utils.h"
 
+void	error(void)
+{
+	ft_putendl_fd("Error", 2);
+	exit(1);
+}
+
 void	ft_putendl_fd(char *s, int fd)
 {
 	int		i;
@@ -34,7 +40,7 @@ int	ft_lstsize(t_linkedlist *stack)
 	t_linkedlist	*temp;
 
 	if (!stack)
-		return (0);
+		return (0); // 
 	temp = stack->next;
 	size = 1;
 	while (temp != stack)
