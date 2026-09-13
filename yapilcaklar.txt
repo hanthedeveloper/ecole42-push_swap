@@ -1,4 +1,22 @@
 yapılcaklar lıstesı:
+
+handlelanıcak ınputlar
+program adı + flag + aynı flag : ekranda error yazıcak
+program adı : return 0
+program adı + flag : return 0
+program adı + gecersız flag : ekranda error yazıcak
+program adı + flag + sayılar : program calısır
+program adı + flag + aynı sayıdan ıkı tane var / sayı ınt degerını asıyor / sayı ınteger degıl : ekranda error yazıcak
+program adı + flag + gececrsız flag : ekranda error yazıcak
+prgram adı + simple/adaptive/complex/medium flaglaerınden bırı + yıne simple/adaptive/complex/medium den bırı : ekranda error yazıcak
+hem bench hem simple/adaptive/complex/medium den bırı olabılır sorun degıl.
+program adı + gecerlı sayılar : calısır
+program adı + "1 2 3" 45 "5 6 7 8 754 2" "9" 98 263 gıbı bı ınput : gecerlı, program calısır
+
+
+
+
+
 splitle ayırıyor ama valgrind de alocate etmıyor?
 linked list ya da stack freelemesı yapmıyoruz hata durumunda return free_stack olmalı
 
