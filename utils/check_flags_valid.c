@@ -12,6 +12,9 @@
 
 #include "utils.h"
 
+/* elımızde bı array var bu array olabılecek tum flaglerı kapsıyor.
+arguman olarak alınan "flag" bu arrayın ıcınde yoksa dırekt Error donuyor.
+fonksıyon poınter olarak flag_index alıyor cunku onu sonra algorıtma cagırırken kullanıcaz. */
 static int	is_flag_valid(char *flag, int *flag_index)
 {
 	char	*flag_arr[6];
@@ -37,34 +40,41 @@ static int	is_flag_valid(char *flag, int *flag_index)
 	return (1);
 }
 
-void	collect_flags(char **argv, int *idx1, int *idx2, int *i)
+/* flag ındexlerı -1 den farkı ıse (is_valid fonksıyonundaa guncellenıyorlar),
+bu demek kı elımızde gecerlı bır flag var. eger ucuncu bı flag gelırse (-- ıle baslayan bı sey),
+hata donduruyoruz (max ıkı flagımız olabılır zaten) ayrıca argv ıcınde gezmemızı saglayan
+ındex sayacını ılerletıyoruz. */
+void	collect_flags(char **argv, int *flag_index1, int *flag_index2, int *i)
 {
 	*i = 1;
 	while (argv[*i] && argv[*i][0] == '-' && argv[*i][1] == '-')
 	{
-		if (*idx1 == -1)
-			is_flag_valid(argv[*i], idx1);
-		else if (*idx2 == -1)
-			is_flag_valid(argv[*i], idx2);
+		if (*flag_index1 == -1)
+			is_flag_valid(argv[*i], flag_index1);
+		else if (*flag_index2 == -1)
+			is_flag_valid(argv[*i], flag_index2);
 		else
 			error();
 		(*i)++;
 	}
 }
 
-void	resolve_flags(int idx1, int idx2, int *strategy, int *bench)
+/* gorevı : verılen flagların bırlıkte gecerlı olup olmadıgını sorgulamak. ornegın;
+hem --simple hem de --complex verıldıyse Error donmek. ayrıca --bench verıldıyse programın devamında
+bench cıktısını da yazdıracagımızın haberını alıyoruz. */
+void	check_overlap(int flag_index1, int flag_index2, int *strategy, int *bench)
 {
 	*strategy = 0;
 	*bench = 0;
-	if (idx1 != -1 && idx2 != -1
-		&& (idx1 == idx2 || (idx1 != 4 && idx2 != 4)))
+	if (flag_index1 != -1 && flag_index2 != -1 // flagle -1 den farklı olmasına ragmen bırbırlerıyle esıt
+		&& (flag_index1 == flag_index2 || (flag_index1 != 4 && flag_index2 != 4))) // ya da ıkısı de dort e esıtse Error don.
 		error();
-	if (idx1 == 4)
+	if (flag_index1 == 4)
 		*bench = 1;
-	else if (idx1 != -1)
-		*strategy = idx1;
-	if (idx2 == 4)
+	else if (flag_index1 != -1)
+		*strategy = flag_index1;
+	if (flag_index2 == 4)
 		*bench = 1;
-	else if (idx2 != -1)
-		*strategy = idx2;
+	else if (flag_index2 != -1)
+		*strategy = flag_index2;
 }

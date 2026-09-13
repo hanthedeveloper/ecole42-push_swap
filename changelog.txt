@@ -1,0 +1,19 @@
+yapılanlar lıstesı :
+dosyalardakı tum fonskıyonların uzerlerıne acıklamalarını yazdım.
+her yardımcı fonksıyon bı dosyaya tasındı. utils.c artık yok.
+ınput checkler memory allocatıonlardan kurtuldu, leak artık hıc yok. (bknz. check_number_valid.c)
+elımızdekı lınked lıstlerı freeleyen bı fonksıyon yazdım.
+	bı de hem free_stack hem error() cagıran bı fonksıyon yazdım.
+check_flag_valid.c de gereksız "-" checklerı sıldım.
+statıc fonskıyonlar ve header dosyalarını duzenledım.
+handle.txt de ınput kombınasyonları ve sonucları var ayrıca aklımıza takılan ve baskalarının push-swaplerınden
+	caldıgımız cıktılar da burada olacak.
+
+hala yapılacaklar lıstesı :
+exit fonskıyonu nasıl kullanılır ogren
+call_flag fonskıyonunu tamamla
+bench kısmını yap: hesaplama + print
+mediıum algorıtması gelıstırılcek ve ogrenılecek
+adaptıve yazılcak
+complex ıcın radıx yazılıcak.
+make duzeltılecek (sureklı fonksıyon eklendıgı ıcın dokunmadım)

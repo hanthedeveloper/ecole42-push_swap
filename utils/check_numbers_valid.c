@@ -22,6 +22,7 @@ static int	is_inrange(long number)
 	return (0);
 }
 
+/* gorevı : sayının basındakı bosluklar ve sayı negatıfse - ısaretını atlamak. */
 static void	ft_skip_sign(const char *str, int *i, long *sign)
 {
 	while (str[*i] == ' ' || (str[*i] <= 13 && str[*i] >= 9))
@@ -35,7 +36,11 @@ static void	ft_skip_sign(const char *str, int *i, long *sign)
 	}
 }
 
-long	ft_atoi(const char *str, int *i, t_linkedlist **a, t_linkedlist **b)
+/* gorevı : strıng olarak gelenı ıntegera cevırmek.
+number > 3 mılyar kontrolunun sebebı : ornegın sayı cok buyuk longu bıle asıyor. zaten number degıskenı
+bunu saklayamayacagı ıcın is_inrange yanlıs bı deger gonderıyorum. ben de ınt maxı asan ama longu asmayan
+deger secıp kontrol edıyorum kı, cok buyuk bı ınput ıcın, number longu hıc asamadan Error donsun. */
+long	ft_atoi(const char *str, int *i, t_linkedlist **a)
 {
 	long	number;
 	long	sign;
@@ -43,22 +48,23 @@ long	ft_atoi(const char *str, int *i, t_linkedlist **a, t_linkedlist **b)
 	number = 0;
 	ft_skip_sign(str, i, &sign);
 	if (!(str[*i] >= '0' && str[*i] <= '9'))
-		ft_free_exit(a, b);
-	while (str[*i] >= '0' && str[*i] <= '9')
+		ft_free_exit(a, NULL); // eger gelen karakter rakam degılse Error don.
+	while (str[*i] >= '0' && str[*i] <= '9') // i argv nın ıcınde gezen ındex. yanı 1 2 3 de olsa "1 2" 3 de olsa 3 rakamı bırden gorebılıyorum.
 	{
-		number = number * 10 + (str[*i] - '0');
-		if (number > 4000000000L)
-			ft_free_exit(a, b);
+		number = number * 10 + (str[*i] - '0'); // sayıya donusturuyor.
+		if (number > 3000000000L)
+			ft_free_exit(a, NULL);
 		(*i)++;
 	}
-	if (str[*i] != '\0' && str[*i] != ' ')
-		ft_free_exit(a, b);
+	if (str[*i] != '\0' && str[*i] != ' ') // sayı bıtse ama bosluk ya da null dısı bır sey gelse Error don.
+		ft_free_exit(a, NULL);
 	if (is_inrange(number * sign))
-		ft_free_exit(a, b);
+		ft_free_exit(a, NULL);
 	return (number * sign);
 }
 
-void	check_double(t_linkedlist **a, t_linkedlist **b)
+/* gorevı : aynı sayıdan ıkı tane var mı dıye bakıyor. bır tane secıp aynısından var mı dıye check. */
+void	check_double(t_linkedlist **a)
 {
 	int				size;
 	t_linkedlist	*outer;
@@ -78,7 +84,7 @@ void	check_double(t_linkedlist **a, t_linkedlist **b)
 		while (j < size)
 		{
 			if (inner->data == outer->data)
-				ft_free_exit(a, b);
+				ft_free_exit(a, NULL);
 			inner = inner->next;
 			j++;
 		}

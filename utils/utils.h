@@ -32,10 +32,10 @@ int		ft_lstsize(t_linkedlist *stack);
 int		ft_strcmp(const char *s1, const char *s2);
 double	disorder_calculator(t_linkedlist *stack);
 
-void	check_double(t_linkedlist **a, t_linkedlist **b);
-long	ft_atoi(const char *str, int *i, t_linkedlist **a, t_linkedlist **b);
+void	check_double(t_linkedlist **a);
+long	ft_atoi(const char *str, int *i, t_linkedlist **a);
 
-void	resolve_flags(int idx1, int idx2, int *strategy, int *bench);
+void	check_overlap(int flag_index1, int flag_index2, int *strategy, int *bench);
 void	collect_flags(char **argv, int *idx1, int *idx2, int *i);
 
 
