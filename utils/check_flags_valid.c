@@ -12,7 +12,7 @@
 
 #include "utils.h"
 
-int	is_flag_valid(char *flag, int *flag_index)
+static int	is_flag_valid(char *flag, int *flag_index)
 {
 	char	*flag_arr[6];
 	int		i;
@@ -56,13 +56,9 @@ void	resolve_flags(int idx1, int idx2, int *strategy, int *bench)
 {
 	*strategy = 0;
 	*bench = 0;
-	if (idx1 != -1 && idx2 != -1)
-	{
-		if (idx1 == idx2)
-			error();
-		if (idx1 != 4 && idx2 != 4)
-			error();
-	}
+	if (idx1 != -1 && idx2 != -1
+		&& (idx1 == idx2 || (idx1 != 4 && idx2 != 4)))
+		error();
 	if (idx1 == 4)
 		*bench = 1;
 	else if (idx1 != -1)

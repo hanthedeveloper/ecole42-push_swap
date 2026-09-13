@@ -22,7 +22,8 @@ static void	move(t_linkedlist **from, t_linkedlist **to)
 	if (!*from)
 		return ;
 	data = pop(from);
-	push(data, to);
+	if (push(data, to) == -1)
+		ft_free_exit(from, to);
 }
 
 /* pa (push a): Take the first element at the top of b and put it at the top of a.

@@ -16,24 +16,25 @@
 /* push: stack data structer mantıgı dolayısıyla,
 cagırıldıgında verılen data ıle !! yenı node olusturarak !!
 verılen lınked lıstın sureklı basına ekleme yapar.
-edit01: lısteyı cembersel yaptım headın prevı lıstenın sonu oluyor yanı */
-void	push(int data, t_linkedlist **stack)
+edit01: lısteyı cembersel yaptım headın prevı lıstenın sonu oluyor yanı
+edit02 : hata varsa -1 donuyor */
+int	push(int data, t_linkedlist **stack)
 {
 	t_linkedlist	*newnode;
 	t_linkedlist	*tail;
 
 	if (!stack)
-		return ;
+		return (0);
 	newnode = (t_linkedlist *)malloc(sizeof(t_linkedlist));
 	if (!newnode)
-		return ; // free stack cagır
+		return (-1);
 	newnode->data = data;
 	if (!*stack)
 	{
 		newnode->next = newnode;
 		newnode->prev = newnode;
 		*stack = newnode;
-		return ;
+		return (0);
 	}
 	tail = (*stack)->prev;
 	newnode->next = *stack;
@@ -41,6 +42,7 @@ void	push(int data, t_linkedlist **stack)
 	tail->next = newnode;
 	(*stack)->prev = newnode;
 	*stack = newnode;
+	return (0);
 }
 
 /* lınked lıstın tepesındekı datanın stackten cıkarılması ıcındır.

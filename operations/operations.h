@@ -15,7 +15,7 @@
 
 #include "../utils/utils.h"
 
-void	push(int data, t_linkedlist **stack);
+int		push(int data, t_linkedlist **stack);
 int		pop(t_linkedlist **stack);
 int		peek(t_linkedlist **stack);
 

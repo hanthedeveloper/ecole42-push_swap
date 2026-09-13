@@ -6,9 +6,11 @@
 /*   By: haincel <haincel@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/12 11:46:40 by haincel           #+#    #+#             */
-/*   Updated: 2026/09/12 16:41:22 by haincel          ###   ########.fr       */
+/*   Updated: 2026/09/13 00:00:00 by haincel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// headerı sıl yenıden yap
 
 #include "utils.h"
 #include <limits.h>
@@ -16,9 +18,7 @@
 static int	is_inrange(long number)
 {
 	if (number < INT_MIN || number > INT_MAX)
-	{
 		return (1);
-	}
 	return (0);
 }
 
@@ -35,46 +35,30 @@ static void	ft_skip_sign(const char *str, int *i, long *sign)
 	}
 }
 
-static int	ft_is_digit(const char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-	{
-		if (!(str[i] <= '9' && str[i] >= '0'))
-		{
-			error();
-		}
-		i++;
-	}
-	return (0);
-}
-
-long	ft_atoi(const char *str)
+long	ft_atoi(const char *str, int *i, t_linkedlist **a, t_linkedlist **b)
 {
 	long	number;
 	long	sign;
-	int		i;
 
-	i = 0;
 	number = 0;
-	ft_skip_sign(str, &i, &sign);
-	if (!(ft_is_digit(str)))
+	ft_skip_sign(str, i, &sign);
+	if (!(str[*i] >= '0' && str[*i] <= '9'))
+		ft_free_exit(a, b);
+	while (str[*i] >= '0' && str[*i] <= '9')
 	{
-		while (str[i] >= '0' && str[i] <= '9')
-		{
-			number = number * 10 + str[i] - '0';
-			i++;
-		}
+		number = number * 10 + (str[*i] - '0');
+		if (number > 4000000000L)
+			ft_free_exit(a, b);
+		(*i)++;
 	}
-	if (!(is_inrange(number * sign)))
-		return (number * sign);
-	error();
-	return (1);
+	if (str[*i] != '\0' && str[*i] != ' ')
+		ft_free_exit(a, b);
+	if (is_inrange(number * sign))
+		ft_free_exit(a, b);
+	return (number * sign);
 }
 
-int	check_double(t_linkedlist *list)
+void	check_double(t_linkedlist **a, t_linkedlist **b)
 {
 	int				size;
 	t_linkedlist	*outer;
@@ -82,10 +66,10 @@ int	check_double(t_linkedlist *list)
 	int				i;
 	int				j;
 
-	if (!list)
-		return (0);
-	size = ft_lstsize(list);
-	outer = list;
+	if (!*a)
+		return ;
+	size = ft_lstsize(*a);
+	outer = *a;
 	i = 0;
 	while (i < size)
 	{
@@ -94,12 +78,11 @@ int	check_double(t_linkedlist *list)
 		while (j < size)
 		{
 			if (inner->data == outer->data)
-				return (1);
+				ft_free_exit(a, b);
 			inner = inner->next;
 			j++;
 		}
 		outer = outer->next;
 		i++;
 	}
-	return (0);
 }
