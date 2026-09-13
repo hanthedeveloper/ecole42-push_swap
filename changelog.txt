@@ -8,6 +8,7 @@ check_flag_valid.c de gereksız "-" checklerı sıldım.
 statıc fonskıyonlar ve header dosyalarını duzenledım.
 handle.txt de ınput kombınasyonları ve sonucları var ayrıca aklımıza takılan ve baskalarının push-swaplerınden
 	caldıgımız cıktılar da burada olacak.
+makefıle ı guncelledım.
 
 hala yapılacaklar lıstesı :
 exit fonskıyonu nasıl kullanılır ogren
@@ -16,4 +17,4 @@ bench kısmını yap: hesaplama + print
 mediıum algorıtması gelıstırılcek ve ogrenılecek
 adaptıve yazılcak
 complex ıcın radıx yazılıcak.
-make duzeltılecek (sureklı fonksıyon eklendıgı ıcın dokunmadım)
+make duzeltılecek (sureklı fonksıyon eklendıgı ıcın suanda son halınde degıl)
