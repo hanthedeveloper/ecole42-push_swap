@@ -48,7 +48,7 @@ int	ft_printf(int fd, const char *type, ...)
 		}
 		else
 		{
-			write(1, &type[i], 1);
+			write(fd, &type[i], 1);
 			len++;
 		}
 		i++;
