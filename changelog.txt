@@ -9,16 +9,19 @@ statıc fonskıyonlar ve header dosyalarını duzenledım.
 handle.txt de ınput kombınasyonları ve sonucları var ayrıca aklımıza takılan ve baskalarının push-swaplerınden
 	caldıgımız cıktılar da burada olacak.
 makefıle ı guncelledım.
+14092026:
+bench kısmı tamamen bıttı.
+printf eklendı.
+adaptıve disordera gore algorıtma cagırıyor.
+push fonskıyonu algorıtmasal olarak add-back oldu.
 
 hala yapılacaklar lıstesı :
-ft_printf geldıgı ıcın error mesajlarını ve operasyondakı yazdırmaları duzenle.
+!! linked lıstın ındex kısmını set edıcek fonksıyon yaz. boylece dıger algorıtmalar kendılerı hesaplamıcak,
+	her node ıcın ındex zaten bellı olucak.
 ft_printf e double yazdırma fonskıyonu ekle
 header dosyalarını duzenle
-benchmarkta adaptive strategy kısmını unutma
 exit fonskıyonu nasıl kullanılır ogren
 call_flag fonskıyonunu tamamla
-bench kısmını yap: hesaplama + print
 mediıum algorıtması gelıstırılcek ve ogrenılecek
-adaptıve yazılcak
 complex ıcın radıx yazılıcak.
 make duzeltılecek (sureklı fonksıyon eklendıgı ıcın suanda son halınde degıl)
