@@ -16,7 +16,7 @@
 /* gorevı : stderr a Error yazdırıp programı bıtırmek. */
 void	error(void)
 {
-	ft_printf(2, "Error");
+	ft_printf(2, "Error\n");
 	exit(1);
 }
 
