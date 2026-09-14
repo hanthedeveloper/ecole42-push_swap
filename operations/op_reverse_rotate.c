@@ -11,7 +11,8 @@
 /* ************************************************************************** */
 
 #include "operations.h"
-/* gorevı : stackı cevırıyor. poınterım artık bı oncekını gosterdıgı ıcın teknık olarak cevrılmıs oldu. */
+/* gorevı : stackı cevırıyor. poınterım artık bı oncekını gosterdıgı
+ıcın teknık olarak cevrılmıs oldu. */
 static void	reverse_rotate(t_linkedlist **stack)
 {
 	if (!stack || !*stack || (*stack)->next == *stack)

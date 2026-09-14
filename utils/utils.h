@@ -6,7 +6,7 @@
 /*   By: haincel <haincel@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/09 11:23:33 by haincel           #+#    #+#             */
-/*   Updated: 2026/09/14 15:59:47 by haincel          ###   ########.fr       */
+/*   Updated: 2026/09/14 20:35:28 by haincel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,14 @@ typedef struct s_linkedlist
 	struct s_linkedlist	*next;
 	struct s_linkedlist	*prev;
 }	t_linkedlist;
+
+typedef struct s_info
+{
+	int	strategy;
+	int	bench;
+	int	findx1;
+	int	findx2;
+}	t_info;
 
 void	error(void);
 void	ft_free_exit(t_linkedlist **a, t_linkedlist **b);

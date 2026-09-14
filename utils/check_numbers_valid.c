@@ -6,11 +6,9 @@
 /*   By: haincel <haincel@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/12 11:46:40 by haincel           #+#    #+#             */
-/*   Updated: 2026/09/14 12:43:04 by haincel          ###   ########.fr       */
+/*   Updated: 2026/09/14 20:39:06 by haincel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-// headerı sıl yenıden yap
 
 #include "utils.h"
 #include <limits.h>
@@ -37,9 +35,12 @@ static void	ft_skip_sign(const char *str, int *i, long *sign)
 }
 
 /* gorevı : strıng olarak gelenı ıntegera cevırmek.
-number > 3 mılyar kontrolunun sebebı : ornegın sayı cok buyuk longu bıle asıyor. zaten number degıskenı
-bunu saklayamayacagı ıcın is_inrange yanlıs bı deger gonderıyorum. ben de ınt maxı asan ama longu asmayan
-deger secıp kontrol edıyorum kı, cok buyuk bı ınput ıcın, number longu hıc asamadan Error donsun. */
+number > 3 mılyar kontrolunun sebebı : ornegın sayı cok buyuk
+longu bıle asıyor. zaten number degıskenı
+bunu saklayamayacagı ıcın is_inrange yanlıs bı deger gonderıyorum.
+ben de ınt maxı asan ama longu asmayan
+deger secıp kontrol edıyorum kı, cok buyuk bı ınput ıcın, number
+longu hıc asamadan Error donsun. */
 long	ft_atoi(const char *str, int *i, t_linkedlist **a)
 {
 	long	number;
@@ -63,7 +64,8 @@ long	ft_atoi(const char *str, int *i, t_linkedlist **a)
 	return (number * sign);
 }
 
-/* gorevı : aynı sayıdan ıkı tane var mı dıye bakıyor. bır tane secıp aynısından var mı dıye check. */
+/* gorevı : aynı sayıdan ıkı tane var mı dıye bakıyor.
+bır tane secıp aynısından var mı dıye check. */
 void	check_double(t_linkedlist **a)
 {
 	int				size;

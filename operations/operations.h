@@ -6,15 +6,15 @@
 /*   By: haincel <haincel@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/14 12:52:46 by haincel           #+#    #+#             */
-/*   Updated: 2026/09/14 14:11:51 by haincel          ###   ########.fr       */
+/*   Updated: 2026/09/14 18:00:59 by haincel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef OPERATIONS_H
 # define OPERATIONS_H
 
-#include "../utils/utils.h"
-#include "../benchmark/benchmark.h"
+# include "../utils/utils.h"
+# include "../benchmark/benchmark.h"
 
 int		push(int data, t_linkedlist **stack);
 int		pop(t_linkedlist **stack);

@@ -6,7 +6,7 @@
 /*   By: haincel <haincel@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/14 12:51:49 by haincel           #+#    #+#             */
-/*   Updated: 2026/09/14 17:00:20 by haincel          ###   ########.fr       */
+/*   Updated: 2026/09/14 19:54:26 by haincel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 
 void	simple(t_linkedlist **a, t_linkedlist **b);
 void	medium(t_linkedlist **a, t_linkedlist **b);
-
 void	adaptive(t_linkedlist **a, t_linkedlist **b, double disorder, t_bench *pointer);
 
 #endif

@@ -6,14 +6,14 @@
 /*   By: haincel <haincel@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/14 12:51:44 by haincel           #+#    #+#             */
-/*   Updated: 2026/09/14 15:52:31 by haincel          ###   ########.fr       */
+/*   Updated: 2026/09/14 19:57:00 by haincel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BENCHMARK_H
 # define BENCHMARK_H
 
-# include "../utils/utils.h"
+#include "../utils/utils.h"
 
 typedef enum e_opc
 {
@@ -39,7 +39,7 @@ typedef struct s_bench
 	int						op_counter[11];
 }	t_bench;
 
-t_bench	*get_bench_pointer();
-void	print_bench();
+t_bench	*get_bench_pointer(void);
+void	print_bench(void);
 
 #endif

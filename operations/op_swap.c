@@ -6,7 +6,7 @@
 /*   By: haincel <haincel@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/14 12:52:38 by haincel           #+#    #+#             */
-/*   Updated: 2026/09/14 17:03:14 by haincel          ###   ########.fr       */
+/*   Updated: 2026/09/14 18:00:45 by haincel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ static void	swap(t_linkedlist *stack)
 Do nothing if there is only one or no elements.
 sb (swap b): Swap the first two elements at the top of stack b.
 Do nothing if there is only one or no elements.
-swaplar sadece degerlerı degıstırdıgı node u ve head poınterına dokunmadıkları ıcın
-cıft poıntera ıhtıyac yok. */
+swaplar sadece degerlerı degıstırdıgı node u ve head poınterına 
+dokunmadıkları ıcın cıft poıntera ıhtıyac yok. */
 void	sa(t_linkedlist *a)
 {
 	swap(a);

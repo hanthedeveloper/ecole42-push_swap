@@ -6,14 +6,14 @@
 /*   By: haincel <haincel@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/14 12:52:03 by haincel           #+#    #+#             */
-/*   Updated: 2026/09/14 16:39:55 by haincel          ###   ########.fr       */
+/*   Updated: 2026/09/14 20:02:47 by haincel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../operations/operations.h"
 
 /* gorevı : eger buldugumuz sayı asagı yakınsa rra yukarı yakınsa ra cagır. */
-static void	sort(t_linkedlist **a, t_linkedlist **b, int size, int min_pos)
+static void	selection_sort(t_linkedlist **a, t_linkedlist **b, int size, int min_pos)
 {
 	if ((size - min_pos) > (min_pos - 0))
 	{

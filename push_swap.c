@@ -6,7 +6,7 @@
 /*   By: haincel <haincel@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/12 15:11:26 by haincel           #+#    #+#             */
-/*   Updated: 2026/09/14 17:02:36 by haincel          ###   ########.fr       */
+/*   Updated: 2026/09/14 20:35:56 by haincel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,14 @@ static void	create_stack_a(char *str, t_linkedlist **a)
 }
 
 /* gorevı : flag durumuna gore algorıtma cagırmak. */
-static void	call_flag(int flag_index, int bench, t_linkedlist **a, t_linkedlist **b)
+static void	call_flag(int flag_index, int bench, t_linkedlist **a,
+	t_linkedlist **b)
 {
 	double	disorder;
-	t_bench *temp;
+	t_bench	*temp;
 
 	temp = get_bench_pointer();
-	disorder =	disorder_calculator(*a);
+	disorder = disorder_calculator(*a);
 	if (flag_index == 0)
 	{
 		adaptive(a, b, disorder, temp);
@@ -54,35 +55,38 @@ static void	call_flag(int flag_index, int bench, t_linkedlist **a, t_linkedlist 
 	}
 }
 
-/* flag ındexlerının adreslerını gonderıyorum guncellenmıs hallerıne gore algorıtma cagırırken
-kullanıcam. flagları aldıktan sonra argumanlar bıttıyse programı sonlandır. */
+/* flagları aldıktan sonra argumanlar bıttıyse programı sonlandır. 
+edıt 14092026 : bı tane daha struct kurdum flag, strategy ve bench
+bılgısını tutuyor. neden? cunku norma gore bı fonskıyon 4 ya da 5
+degısken tanımlayabılıyomus ıcınde. ben de structa tasıdım.
+poıntersız olmasının sebebı de bellektekı yerı hıc degısmıyor.
+sadece bılgı tutuyor. bundan dolayı.
+edıt02 : flag_index yerıne findx1/2 oldu satır cok uzuncu kısaltmak
+ıcın */
 int	main(int argc, char **argv)
 {
 	t_linkedlist	*stack_a;
 	t_linkedlist	*stack_b;
-	int				flag_index1;
-	int				flag_index2;
-	int				strategy;
-	int				bench;
-	int				i; // argv ıcınde gezen ındex sayacı (hangı argumanda oldugumuzu bılmemız ıcın)
+	t_info			info;
+	int				i;
 
 	stack_a = NULL;
 	stack_b = NULL;
-	flag_index1 = -1;
-	flag_index2 = -1;
-	if (argc < 2) // eger arguman sayısı ıkıden kucukse sadece programı sonlandır.
+	info.findx1 = -1;
+	info.findx2 = -1;
+	if (argc < 2)
 		return (0);
-	collect_flags(argv, &flag_index1, &flag_index2, &i);
-	check_overlap(flag_index1, flag_index2, &strategy, &bench);
+	collect_flags(argv, &info.findx1, &info.findx2, &i);
+	check_overlap(info.findx1, info.findx2, info.strategy, info.bench);
 	if (!argv[i])
 		return (0);
 	while (argv[i])
 	{
-		create_stack_a(argv[i], &stack_a); // butun sayıların ınteger olması durumunda stack a olusur.
+		create_stack_a(argv[i], &stack_a);
 		i++;
 	}
 	check_double(&stack_a);
-	call_flag(strategy, bench, &stack_a, &stack_b);
+	call_flag(info.strategy, info.bench, &stack_a, &stack_b);
 	free_stack(&stack_a);
 	free_stack(&stack_b);
 	return (0);

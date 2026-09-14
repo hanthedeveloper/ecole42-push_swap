@@ -12,7 +12,8 @@
 
 #include "operations.h"
 
-/* gorevı : stackı cevırıyor. poınterım artık bı sonrakını gosterdıgı ıcın teknık olarak cevrılmıs oldu. */
+/* gorevı : stackı cevırıyor. poınterım artık bı sonrakını
+gosterdıgı ıcın teknık olarak cevrılmıs oldu. */
 static void	rotate(t_linkedlist **stack)
 {
 	if (!stack || !*stack || (*stack)->next == *stack)

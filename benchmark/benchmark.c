@@ -6,16 +6,16 @@
 /*   By: haincel <haincel@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/14 12:53:20 by haincel           #+#    #+#             */
-/*   Updated: 2026/09/14 17:04:08 by haincel          ###   ########.fr       */
+/*   Updated: 2026/09/14 19:56:55 by haincel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "benchmark.h"
-#include <stdlib.h>
 
-t_bench *get_bench_pointer()
+t_bench	*get_bench_pointer(void)
 {
-	static t_bench bench_pointer;
+	static t_bench	bench_pointer;
+
 	return (&bench_pointer);
 }
 
@@ -46,26 +46,31 @@ static void	sum_op(t_bench *temp)
 	temp->total_op = sum;
 }
 
-void	print_bench()
+void	print_bench(void)
 {
 	t_bench	*temp;
 
 	temp = get_bench_pointer();
 	ft_printf(2, "disorder: %f%%\n", temp->disorder);
 	if (temp->strategy == 0)
-		ft_printf(2, "strategy: Adaptive / %s\n", temp->adaptive_strategy); // adaptive yazarken burayı unutma
+		ft_printf(2, "strategy: Adaptive / %s\n", temp->adaptive_strategy);
 	if (temp->strategy == 1)
 		ft_printf(2, "strategy: Simple / O(n^2)\n");
 	if (temp->strategy == 2)
-		ft_printf(2, "strategy: Medium / O(n√n)\n"); 
+		ft_printf(2, "strategy: Medium / O(n√n)\n");
 	if (temp->strategy == 3)
 		ft_printf(2, "strategy: Complex / O(n log n)\n");
 	sum_op(temp);
 	ft_printf(2, "total_ops: %d\n", temp->total_op);
 	ft_printf(2, "sa: %d sb: %d ss: %d pa: %d ",
-	temp->op_counter[op_sa], temp->op_counter[op_sb], temp->op_counter[op_ss], temp->op_counter[op_pa]);
+		temp->op_counter[op_sa], temp->op_counter[op_sb],
+		temp->op_counter[op_ss],
+		temp->op_counter[op_pa]);
 	ft_printf(2, "pb: %d ra: %d rb: %d rr: %d ",
-	temp->op_counter[op_pb], temp->op_counter[op_ra], temp->op_counter[op_rb], temp->op_counter[op_rr]);
+		temp->op_counter[op_pb], temp->op_counter[op_ra],
+		temp->op_counter[op_rb],
+		temp->op_counter[op_rr]);
 	ft_printf(2, "rra: %d rrb: %d rrr: %d ",
-	temp->op_counter[op_rra], temp->op_counter[op_rrb], temp->op_counter[op_rrr]);
+		temp->op_counter[op_rra], temp->op_counter[op_rrb],
+		temp->op_counter[op_rrr]);
 }

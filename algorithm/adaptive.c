@@ -6,7 +6,7 @@
 /*   By: haincel <haincel@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/14 16:31:40 by haincel           #+#    #+#             */
-/*   Updated: 2026/09/14 17:09:47 by haincel          ###   ########.fr       */
+/*   Updated: 2026/09/14 18:20:42 by haincel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,8 @@ void	adaptive(t_linkedlist **a, t_linkedlist **b, double disorder, t_bench *poin
 	}
 	else
 	{
-		pointer->adaptive_strategy = "O(n√n)";
-		medium(a, b);
-		ft_printf(1, "merebe");
+		pointer->adaptive_strategy = "O(n log n)";
+		// complex(a, b);
 	}
-
-	
+	// stack sıralı mı flagı her fonksıyon ıcın var
 }

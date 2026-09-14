@@ -6,11 +6,12 @@
 /*   By: haincel <haincel@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/05 11:27:51 by haincel           #+#    #+#             */
-/*   Updated: 2026/09/14 16:55:08 by haincel          ###   ########.fr       */
+/*   Updated: 2026/09/14 19:57:27 by haincel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdarg.h>
 
 static int	check(char t, va_list *args, int fd)
 {
@@ -21,9 +22,9 @@ static int	check(char t, va_list *args, int fd)
 	if (t == 's')
 		return (ft_putstr_fd(va_arg(*args, char *), fd));
 	if (t == 'f')
-		return 1;
+		return (ft_putdouble_fd(va_arg(*args, double), fd));
 	if (t == '%')
-		ft_putchar_fd('%', fd);// double yazdırma fonskıyonu
+		ft_putchar_fd('%', fd);
 	return (0);
 }
 
