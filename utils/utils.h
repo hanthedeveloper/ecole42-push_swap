@@ -6,14 +6,14 @@
 /*   By: haincel <haincel@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/09 11:23:33 by haincel           #+#    #+#             */
-/*   Updated: 2026/09/12 16:41:02 by haincel          ###   ########.fr       */
+/*   Updated: 2026/09/14 15:59:47 by haincel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef UTILS_H
 # define UTILS_H
 
-# include <stdlib.h>
+# include "ft_printf/ft_printf.h"
 
 typedef struct s_linkedlist
 {
@@ -25,8 +25,8 @@ typedef struct s_linkedlist
 
 void	error(void);
 void	ft_free_exit(t_linkedlist **a, t_linkedlist **b);
+void	free_stack(t_linkedlist **stack);
 
-void	ft_putendl_fd(char *s, int fd);
 int		ft_lstsize(t_linkedlist *stack);
 
 int		ft_strcmp(const char *s1, const char *s2);

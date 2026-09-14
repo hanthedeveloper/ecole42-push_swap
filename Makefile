@@ -7,6 +7,7 @@ RM = rm -f
 SRC = push_swap.c \
 	algorithm/simple.c \
 	algorithm/medium.c \
+	algorithm/adaptive.c \
 	operations/op_pop_push.c \
 	operations/op_reverse_rotate.c \
 	operations/op_rotate.c \
@@ -17,8 +18,12 @@ SRC = push_swap.c \
 	utils/disorder_calculator.c \
 	utils/free_and_error.c \
 	utils/ft_lstsize.c \
-	utils/ft_putendl_fd.c \
-	utils/ft_strcmp.c
+	utils/ft_strcmp.c \
+	benchmark/benchmark.c \
+	utils/ft_printf/ft_print_number.c \
+	utils/ft_printf/ft_print_string.c \
+	utils/ft_printf/ft_printf.c \
+
 
 OBJ = $(SRC:.c=.o)
 
@@ -28,7 +33,7 @@ $(NAME): $(OBJ)
 	@$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 %.o: %.c
-	@$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	@$(RM) $(OBJ)

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: haincel <haincel@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/12 11:05:59 by haincel           #+#    #+#             */
-/*   Updated: 2026/09/12 11:26:00 by haincel          ###   ########.fr       */
+/*   Created: 2026/09/14 12:51:56 by haincel           #+#    #+#             */
+/*   Updated: 2026/09/14 17:10:43 by haincel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ static void	push_max_to_a(t_linkedlist **a, t_linkedlist **b)
 			max_pos++;
 		}
 	}
-	pa(a, b);
+	pa(b, a);
 }
 /*
 ** chunk_sort - Kayan pencere (chunk) mantığıyla yığını sıralar.
@@ -80,7 +80,7 @@ static void	push_max_to_a(t_linkedlist **a, t_linkedlist **b)
 **    küçükleri B'nin üstüne, ortadakileri B'nin dibine (rb) atarak kum saati yapısı kurar.
 ** 2. Aşama: B'deki en büyük elemanları minimum rotasyonla tepeye getirip A'ya geri dizer.
 */
-void	chunk_sort(t_linkedlist **a, t_linkedlist **b)
+void	medium(t_linkedlist **a, t_linkedlist **b)
 {
 	int	chunk_size;
 	int	i;
@@ -106,5 +106,7 @@ void	chunk_sort(t_linkedlist **a, t_linkedlist **b)
 			ra(a);
 	}
 	while (*b)
+	{
 		push_max_to_a(a, b);
+	}
 }

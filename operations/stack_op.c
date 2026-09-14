@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: haincel <haincel@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/08 14:37:55 by haincel           #+#    #+#             */
-/*   Updated: 2026/09/12 14:23:00 by haincel          ###   ########.fr       */
+/*   Created: 2026/09/14 12:52:51 by haincel           #+#    #+#             */
+/*   Updated: 2026/09/14 17:32:36 by haincel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 /* push: stack data structer mantıgı dolayısıyla,
 cagırıldıgında verılen data ıle !! yenı node olusturarak !!
-verılen lınked lıstın sureklı basına ekleme yapar.
+verılen lınked lıstın sureklı SONUNA ekleme yapar.
 edit01: lısteyı cembersel yaptım headın prevı lıstenın sonu oluyor yanı
 edit02 : hata varsa -1 donuyor */
 int	push(int data, t_linkedlist **stack)
@@ -41,7 +41,6 @@ int	push(int data, t_linkedlist **stack)
 	newnode->prev = tail;
 	tail->next = newnode;
 	(*stack)->prev = newnode;
-	*stack = newnode;
 	return (0);
 }
 

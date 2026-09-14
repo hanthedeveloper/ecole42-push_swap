@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: haincel <haincel@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/09 11:41:07 by haincel           #+#    #+#             */
-/*   Updated: 2026/09/12 15:44:10 by haincel          ###   ########.fr       */
+/*   Created: 2026/09/14 12:52:03 by haincel           #+#    #+#             */
+/*   Updated: 2026/09/14 16:39:55 by haincel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ static int	find_min(t_linkedlist *temp, int *size)
 }
 
 /* gorevı : mınımum sayıları b ye pushluyor sonra da b den a ya gerı pusluyor a sıralanmıs oluyor. */
-void	selection_sort(t_linkedlist **a, t_linkedlist **b)
+void	simple(t_linkedlist **a, t_linkedlist **b)
 {
 	int	min_pos;
 	int	size;

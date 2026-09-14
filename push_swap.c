@@ -6,7 +6,7 @@
 /*   By: haincel <haincel@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/12 15:11:26 by haincel           #+#    #+#             */
-/*   Updated: 2026/09/13 00:00:00 by haincel          ###   ########.fr       */
+/*   Updated: 2026/09/14 17:02:36 by haincel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,24 @@ static void	create_stack_a(char *str, t_linkedlist **a)
 	}
 }
 
-/* gorevı : flag durumuna gore algorıtma cagırmak. yazımı BITMEDI.  */
+/* gorevı : flag durumuna gore algorıtma cagırmak. */
 static void	call_flag(int flag_index, int bench, t_linkedlist **a, t_linkedlist **b)
 {
-	selection_sort(a, b);
+	double	disorder;
+	t_bench *temp;
+
+	temp = get_bench_pointer();
+	disorder =	disorder_calculator(*a);
+	if (flag_index == 0)
+	{
+		adaptive(a, b, disorder, temp);
+	}
+	if (bench == 1)
+	{
+		temp->strategy = flag_index;
+		temp->disorder = disorder;
+		print_bench();
+	}
 }
 
 /* flag ındexlerının adreslerını gonderıyorum guncellenmıs hallerıne gore algorıtma cagırırken
@@ -68,7 +82,6 @@ int	main(int argc, char **argv)
 		i++;
 	}
 	check_double(&stack_a);
-// butun kontroller tamamsa artık algorıtmayı cagırıyoruz.
 	call_flag(strategy, bench, &stack_a, &stack_b);
 	free_stack(&stack_a);
 	free_stack(&stack_b);

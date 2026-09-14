@@ -1,21 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_print_number.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: haincel <haincel@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/08 14:33:32 by haincel           #+#    #+#             */
-/*   Updated: 2026/09/14 13:44:02 by haincel          ###   ########.fr       */
+/*   Created: 2026/09/05 11:27:38 by haincel           #+#    #+#             */
+/*   Updated: 2026/09/14 15:53:48 by haincel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "ft_printf.h"
+#include <limits.h>
 
-#include "operations/operations.h"
-#include "algorithm/algorithm.h"
-#include "benchmark/benchmark.h"
-#include "utils/utils.h"
+int	ft_putnbr_fd(int nb, int fd)
+{
+	int	len;
 
-#endif
+	len = 0;
+	if (nb == INT_MIN)
+	{
+		write(fd, "-2147483648", 11);
+		return (11);
+	}
+	if (nb < 0)
+	{
+		len += ft_putchar_fd('-', fd);
+		nb = -nb;
+	}
+	if (nb >= 10)
+		len += ft_putnbr_fd(nb / 10, fd);
+	len += ft_putchar_fd((nb % 10) + '0', fd);
+	return (len);
+}

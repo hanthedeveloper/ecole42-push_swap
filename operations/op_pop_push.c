@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: haincel <haincel@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/09 11:28:43 by haincel           #+#    #+#             */
-/*   Updated: 2026/09/09 11:28:43 by haincel          ###   ########.fr       */
+/*   Created: 2026/09/14 12:52:12 by haincel           #+#    #+#             */
+/*   Updated: 2026/09/14 12:52:12 by haincel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,13 @@ Do nothing if a is empty */
 void	pa(t_linkedlist **b, t_linkedlist **a)
 {
 	move(b, a);
-	ft_putendl_fd("pa", 1);
+	ft_printf(1, "pa\n");
+	get_bench_pointer()->op_counter[op_pa]++;
 }
 
 void	pb(t_linkedlist **a, t_linkedlist **b)
 {
 	move(a, b);
-	ft_putendl_fd("pb", 1);
+	ft_printf(1, "pb\n");
+	get_bench_pointer()->op_counter[op_pb]++;
 }

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: haincel <haincel@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/08 16:26:53 by haincel           #+#    #+#             */
-/*   Updated: 2026/09/09 11:34:08 by haincel          ###   ########.fr       */
+/*   Created: 2026/09/14 12:52:38 by haincel           #+#    #+#             */
+/*   Updated: 2026/09/14 17:03:14 by haincel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,18 +34,21 @@ cıft poıntera ıhtıyac yok. */
 void	sa(t_linkedlist *a)
 {
 	swap(a);
-	ft_putendl_fd("sa", 1);
+	ft_printf(1, "sa\n");
+	get_bench_pointer()->op_counter[op_sa]++;
 }
 
 void	sb(t_linkedlist *b)
 {
 	swap(b);
-	ft_putendl_fd("sb", 1);
+	ft_printf(1, "sb\n");
+	get_bench_pointer()->op_counter[op_sb]++;
 }
 
 void	ss(t_linkedlist *a, t_linkedlist *b)
 {
 	swap(a);
 	swap(b);
-	ft_putendl_fd("ss", 1);
+	ft_printf(1, "ss\n");
+	get_bench_pointer()->op_counter[op_ss]++;
 }

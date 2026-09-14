@@ -1,21 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: haincel <haincel@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/08 14:33:32 by haincel           #+#    #+#             */
-/*   Updated: 2026/09/14 13:44:02 by haincel          ###   ########.fr       */
+/*   Created: 2026/09/05 11:27:58 by haincel           #+#    #+#             */
+/*   Updated: 2026/09/14 16:00:24 by haincel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-#include "operations/operations.h"
-#include "algorithm/algorithm.h"
-#include "benchmark/benchmark.h"
-#include "utils/utils.h"
+# include <stdarg.h>
+# include <unistd.h>
+
+int		ft_printf(int fd, const char *type, ...);
+int		ft_putchar_fd(char c, int fd);
+int		ft_putnbr_fd(int nb, int fd);
+int		ft_putstr_fd(char *s, int fd);
 
 #endif

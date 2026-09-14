@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: haincel <haincel@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/09 11:19:29 by haincel           #+#    #+#             */
-/*   Updated: 2026/09/12 11:23:33 by haincel          ###   ########.fr       */
+/*   Created: 2026/09/14 12:51:49 by haincel           #+#    #+#             */
+/*   Updated: 2026/09/14 17:00:20 by haincel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,11 @@
 # define ALGORITHM_H
 
 # include "../utils/utils.h"
+# include "../benchmark/benchmark.h"
 
-void	selection_sort(t_linkedlist **a, t_linkedlist **b);
-void	chunk_sort(t_linkedlist **a, t_linkedlist **b);
+void	simple(t_linkedlist **a, t_linkedlist **b);
+void	medium(t_linkedlist **a, t_linkedlist **b);
+
+void	adaptive(t_linkedlist **a, t_linkedlist **b, double disorder, t_bench *pointer);
 
 #endif

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: haincel <haincel@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/09 11:19:12 by haincel           #+#    #+#             */
-/*   Updated: 2026/09/12 11:23:21 by haincel          ###   ########.fr       */
+/*   Created: 2026/09/14 12:52:46 by haincel           #+#    #+#             */
+/*   Updated: 2026/09/14 14:11:51 by haincel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define OPERATIONS_H
 
 #include "../utils/utils.h"
+#include "../benchmark/benchmark.h"
 
 int		push(int data, t_linkedlist **stack);
 int		pop(t_linkedlist **stack);
@@ -23,7 +24,7 @@ void	sa(t_linkedlist *a);
 void	sb(t_linkedlist *b);
 void	ss(t_linkedlist *a, t_linkedlist *b);
 
-void	pa(t_linkedlist **b, t_linkedlist **a);
+void	pa(t_linkedlist **a, t_linkedlist **b);
 void	pb(t_linkedlist **a, t_linkedlist **b);
 
 void	ra(t_linkedlist **a);

@@ -1,9 +1,10 @@
 #include "utils.h"
+#include <stdlib.h>
 
 /* gorevı : stderr a Error yazdırıp programı bıtırmek. */
 void	error(void)
 {
-	ft_putendl_fd("Error", 2);
+	ft_printf(2, "Error");
 	exit(1);
 }
 

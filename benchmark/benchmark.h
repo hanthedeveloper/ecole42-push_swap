@@ -1,21 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   benchmark.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: haincel <haincel@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/08 14:33:32 by haincel           #+#    #+#             */
-/*   Updated: 2026/09/14 13:44:02 by haincel          ###   ########.fr       */
+/*   Created: 2026/09/14 12:51:44 by haincel           #+#    #+#             */
+/*   Updated: 2026/09/14 15:52:31 by haincel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#ifndef BENCHMARK_H
+# define BENCHMARK_H
 
-#include "operations/operations.h"
-#include "algorithm/algorithm.h"
-#include "benchmark/benchmark.h"
-#include "utils/utils.h"
+# include "../utils/utils.h"
+
+typedef enum e_opc
+{
+	op_sa,
+	op_sb,
+	op_ss,
+	op_pa,
+	op_pb,
+	op_ra,
+	op_rb,
+	op_rr,
+	op_rra,
+	op_rrb,
+	op_rrr,
+}	t_opc;
+
+typedef struct s_bench
+{
+	double					disorder;
+	int						strategy;
+	char					*adaptive_strategy;
+	int						total_op;
+	int						op_counter[11];
+}	t_bench;
+
+t_bench	*get_bench_pointer();
+void	print_bench();
 
 #endif
