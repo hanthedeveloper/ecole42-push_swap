@@ -19,6 +19,7 @@ SRC = push_swap.c \
 	utils/free_and_error.c \
 	utils/ft_lstsize.c \
 	utils/ft_strcmp.c \
+	utils/rank.c \
 	benchmark/benchmark.c \
 	utils/ft_printf/ft_print_number.c \
 	utils/ft_printf/ft_print_string.c \

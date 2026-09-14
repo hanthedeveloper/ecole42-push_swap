@@ -6,7 +6,7 @@
 /*   By: haincel <haincel@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/14 12:51:56 by haincel           #+#    #+#             */
-/*   Updated: 2026/09/14 17:10:43 by haincel          ###   ########.fr       */
+/*   Updated: 2026/09/14 21:33:13 by haincel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,14 @@ static int	find_max_pos(t_linkedlist *stack)
 	int				pos;
 
 	head = stack;
-	max = stack->index;
+	max = stack->rank;
 	max_pos = 0;
 	pos = 0;
 	do
 	{
-		if (stack->index > max)
+		if (stack->rank > max)
 		{
-			max = stack->index;
+			max = stack->rank;
 			max_pos = pos;
 		}
 		stack = stack->next;
@@ -91,12 +91,12 @@ void	medium(t_linkedlist **a, t_linkedlist **b)
 	i = 0;
 	while (*a)
 	{
-		if ((*a)->index <= i)
+		if ((*a)->rank <= i)
 		{
 			pb(a, b);
 			i++;
 		}
-		else if ((*a)->index <= i + chunk_size)
+		else if ((*a)->rank <= i + chunk_size)
 		{
 			pb(a, b);
 			rb(b);

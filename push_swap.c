@@ -6,7 +6,7 @@
 /*   By: haincel <haincel@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/12 15:11:26 by haincel           #+#    #+#             */
-/*   Updated: 2026/09/14 20:35:56 by haincel          ###   ########.fr       */
+/*   Updated: 2026/09/14 21:44:56 by haincel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,16 +43,22 @@ static void	call_flag(int flag_index, int bench, t_linkedlist **a,
 
 	temp = get_bench_pointer();
 	disorder = disorder_calculator(*a);
-	if (flag_index == 0)
+	temp->strategy = flag_index;
+	temp->disorder = disorder;
+	if (disorder == 0.00)
 	{
-		adaptive(a, b, disorder, temp);
-	}
-	if (bench == 1)
-	{
-		temp->strategy = flag_index;
-		temp->disorder = disorder;
+		bench = 0;
 		print_bench();
+		return ;
 	}
+	if (flag_index == 0)
+		adaptive(a, b, disorder, temp);
+	if (flag_index == 1)
+		simple(a, b);
+	if (flag_index == 2)
+		medium(a, b);
+	if (bench == 1)
+		print_bench();
 }
 
 /* flagları aldıktan sonra argumanlar bıttıyse programı sonlandır. 
@@ -74,10 +80,9 @@ int	main(int argc, char **argv)
 	stack_b = NULL;
 	info.findx1 = -1;
 	info.findx2 = -1;
-	if (argc < 2)
-		return (0);
+	(void)argc;
 	collect_flags(argv, &info.findx1, &info.findx2, &i);
-	check_overlap(info.findx1, info.findx2, info.strategy, info.bench);
+	check_overlap(info.findx1, info.findx2, &info.strategy, &info.bench);
 	if (!argv[i])
 		return (0);
 	while (argv[i])
@@ -86,6 +91,7 @@ int	main(int argc, char **argv)
 		i++;
 	}
 	check_double(&stack_a);
+	give_rank(&stack_a);
 	call_flag(info.strategy, info.bench, &stack_a, &stack_b);
 	free_stack(&stack_a);
 	free_stack(&stack_b);

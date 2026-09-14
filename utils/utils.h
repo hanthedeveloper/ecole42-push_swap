@@ -6,7 +6,7 @@
 /*   By: haincel <haincel@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/09 11:23:33 by haincel           #+#    #+#             */
-/*   Updated: 2026/09/14 20:35:28 by haincel          ###   ########.fr       */
+/*   Updated: 2026/09/14 21:38:22 by haincel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 typedef struct s_linkedlist
 {
 	int					data;
-	int					index;
+	int					rank;
 	struct s_linkedlist	*next;
 	struct s_linkedlist	*prev;
 }	t_linkedlist;
@@ -36,7 +36,7 @@ void	ft_free_exit(t_linkedlist **a, t_linkedlist **b);
 void	free_stack(t_linkedlist **stack);
 
 int		ft_lstsize(t_linkedlist *stack);
-
+void	give_rank(t_linkedlist **stack);
 int		ft_strcmp(const char *s1, const char *s2);
 double	disorder_calculator(t_linkedlist *stack);
 
