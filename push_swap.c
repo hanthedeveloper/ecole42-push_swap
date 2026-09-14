@@ -47,8 +47,8 @@ static void	call_flag(int flag_index, int bench, t_linkedlist **a,
 	temp->disorder = disorder;
 	if (disorder == 0.00)
 	{
-		bench = 0;
-		print_bench();
+		if (bench == 1)
+			print_bench();
 		return ;
 	}
 	if (flag_index == 0)
