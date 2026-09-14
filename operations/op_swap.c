@@ -18,7 +18,7 @@ static void	swap(t_linkedlist *stack)
 {
 	int	temp;
 
-	if (!stack)
+	if (!stack || stack->next == stack)
 		return ;
 	temp = stack->data;
 	stack->data = stack->next->data;
