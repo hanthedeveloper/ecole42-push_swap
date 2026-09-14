@@ -1,5 +1,4 @@
 yapılanlar lıstesı :
-dosyalardakı tum fonskıyonların uzerlerıne acıklamalarını yazdım.
 her yardımcı fonksıyon bı dosyaya tasındı. utils.c artık yok.
 ınput checkler memory allocatıonlardan kurtuldu, leak artık hıc yok. (bknz. check_number_valid.c)
 elımızdekı lınked lıstlerı freeleyen bı fonksıyon yazdım.
@@ -16,10 +15,11 @@ adaptıve disordera gore algorıtma cagırıyor.
 push fonskıyonu algorıtmasal olarak add-back oldu.
 double yazdırma fonskıyonu ekledım.
 header dosyalarını duzenledım.
+eger disorder sıfır ıse, bu stack zaten sıralı demek oluyor, bench flagı varsa benchı cagır cık yoksa dırekt cık hıcbı sey yapma.
+stacktekı elemanlara rank veren fonskıyonu yazdım.
+
 
 hala yapılacaklar lıstesı :
-!! linked lıstın ındex kısmını set edıcek fonksıyon yaz. boylece dıger algorıtmalar kendılerı hesaplamıcak,
-	her node ıcın ındex zaten bellı olucak.
 exit fonskıyonu nasıl kullanılır ogren
 call_flag fonskıyonunu tamamla
 mediıum algorıtması gelıstırılcek ve ogrenılecek
