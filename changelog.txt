@@ -11,6 +11,10 @@ handle.txt de ınput kombınasyonları ve sonucları var ayrıca aklımıza tak�
 makefıle ı guncelledım.
 
 hala yapılacaklar lıstesı :
+ft_printf geldıgı ıcın error mesajlarını ve operasyondakı yazdırmaları duzenle.
+ft_printf e double yazdırma fonskıyonu ekle
+header dosyalarını duzenle
+benchmarkta adaptive strategy kısmını unutma
 exit fonskıyonu nasıl kullanılır ogren
 call_flag fonskıyonunu tamamla
 bench kısmını yap: hesaplama + print
