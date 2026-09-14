@@ -41,9 +41,7 @@ int	ft_putdouble_fd(double number, int fd)
 {
 	int	len;
 	int	temp;
-	int	i;
 
-	i = 0;
 	len = 0;
 	temp = number * 10000;
 	len += ft_putnbr_fd((temp / 100), fd);
