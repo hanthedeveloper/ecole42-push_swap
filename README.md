@@ -135,7 +135,7 @@ Introduction to algorithms (3. bs.). The MIT Press.
 
 ### AI usage
 
-AAI was used to fill in the gaps in the subject.pdf where it lacked details.
+AI was used to fill in the gaps in the subject.pdf where it lacked details.
 It was not used to write the function implementations themselves.
 
 ## Contributions
@@ -151,4 +151,4 @@ This is a group project completed by exactly 2 learners:
   creating the structure of the project.
 
 Both learners contributed meaningfully to the project, reviewed each
-other's code.
+other's code and building the structer of algorithms.
