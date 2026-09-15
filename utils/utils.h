@@ -43,6 +43,8 @@ double	disorder_calculator(t_linkedlist *stack);
 void	check_double(t_linkedlist **a);
 long	ft_atoi(const char *str, int *i, t_linkedlist **a);
 
+void	create_stack_a(char *str, t_linkedlist **a)
+
 void	check_overlap(int flag_index1, int flag_index2, int *strategy, int *bench);
 void	collect_flags(char **argv, int *idx1, int *idx2, int *i);
 
