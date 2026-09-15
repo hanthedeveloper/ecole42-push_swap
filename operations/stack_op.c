@@ -15,7 +15,7 @@
 
 /* push: stack data structer mantıgı dolayısıyla,
 cagırıldıgında verılen data ıle !! yenı node olusturarak !!
-verılen lınked lıstın sureklı SONUNA ekleme yapar.
+verılen lınked lıstın sureklı BASINA ekleme yapar.
 edit01: lısteyı cembersel yaptım headın prevı lıstenın sonu oluyor yanı
 edit02 : hata varsa -1 donuyor */
 int	push(int data, t_linkedlist **stack)
@@ -41,6 +41,7 @@ int	push(int data, t_linkedlist **stack)
 	newnode->prev = tail;
 	tail->next = newnode;
 	(*stack)->prev = newnode;
+	*stack = newnode;
 	return (0);
 }
 
