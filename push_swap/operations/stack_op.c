@@ -1,0 +1,74 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   stack_op.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: haincel <haincel@student.42istanbul.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/09/14 12:52:51 by haincel           #+#    #+#             */
+/*   Updated: 2026/09/15 15:15:24 by haincel          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "operations.h"
+#include <stdlib.h>
+
+/* push: stack data structer mantıgı dolayısıyla,
+cagırıldıgında verılen data ıle !! yenı node olusturarak !!
+verılen lınked lıstın sureklı BASINA ekleme yapar.
+edit01: lısteyı cembersel yaptım headın prevı lıstenın sonu oluyor yanı
+edit02 : hata varsa -1 donuyor */
+int	push(int data, t_linkedlist **stack)
+{
+	t_linkedlist	*newnode;
+	t_linkedlist	*tail;
+
+	if (!stack)
+		return (0);
+	newnode = (t_linkedlist *)malloc(sizeof(t_linkedlist));
+	if (!newnode)
+		return (-1);
+	newnode->data = data;
+	if (!*stack)
+	{
+		newnode->next = newnode;
+		newnode->prev = newnode;
+		*stack = newnode;
+		return (0);
+	}
+	tail = (*stack)->prev;
+	newnode->next = *stack;
+	newnode->prev = tail;
+	tail->next = newnode;
+	(*stack)->prev = newnode;
+	*stack = newnode;
+	return (0);
+}
+
+/* lınked lıstın tepesındekı datanın stackten cıkarılması ıcındır.
+boylece yenı data bı alttakı olur.
+or: stack bası -> 1 2 3 4 poptan sonra stack bası -> 2 3 4 
+edit01: bu da lıste cembersel oldugu ıcın edıtlendı */
+int	pop(t_linkedlist **stack)
+{
+	int				popdata;
+	t_linkedlist	*temp;
+	t_linkedlist	*tail;
+
+	if (!stack || !*stack)
+		return (0);
+	popdata = (*stack)->data;
+	temp = *stack;
+	if ((*stack)->next == *stack)
+	{
+		*stack = NULL;
+		free(temp);
+		return (popdata);
+	}
+	tail = (*stack)->prev;
+	*stack = temp->next;
+	(*stack)->prev = tail;
+	tail->next = *stack;
+	free(temp);
+	return (popdata);
+}
