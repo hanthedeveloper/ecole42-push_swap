@@ -15,7 +15,7 @@
 /* pop the first element at the top of the first given stack called "from",
 and push it at the top of the second stack called "to".
 do nothing if "from" stack is empty. */
-static void	move(t_linkedlist **from, t_linkedlist **to)
+static int	move(t_linkedlist **from, t_linkedlist **to)
 {
 	int	data;
 	int	rank;                    // <-- YENİ satır
@@ -35,9 +35,11 @@ pb (push b): Take the first element at the top of a and
 put it at the top of b. Do nothing if a is empty */
 void	pa(t_linkedlist **b, t_linkedlist **a)
 {
-	move(b, a);
-	ft_printf(1, "pa\n");
-	get_bench_pointer()->op_counter[op_pa]++;
+	if (move(b, a))
+	{
+		ft_printf(1, "pa\n");
+		get_bench_pointer()->op_counter[op_pa]++;
+	}
 }
 
 void	pb(t_linkedlist **a, t_linkedlist **b)
