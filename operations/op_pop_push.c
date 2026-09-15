@@ -18,12 +18,15 @@ do nothing if "from" stack is empty. */
 static void	move(t_linkedlist **from, t_linkedlist **to)
 {
 	int	data;
+	int	rank;                    // <-- YENİ satır
 
 	if (!*from)
 		return ;
+	rank = (*from)->rank;            // <-- YENİ satır (pop'tan ÖNCE, node silinmeden önce)
 	data = pop(from);
 	if (push(data, to) == -1)
 		ft_free_exit(from, to);
+	(*to)->rank = rank;               // <-- YENİ satır (push'tan SONRA)
 }
 
 /* pa (push a): Take the first element at the top of b and
