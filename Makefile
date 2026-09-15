@@ -18,6 +18,7 @@ SRC = push_swap.c \
 	utils/disorder_calculator.c \
 	utils/free_and_error.c \
 	utils/ft_lstsize.c \
+	utils/create_stack_a.c \
 	utils/ft_strcmp.c \
 	utils/rank.c \
 	benchmark/benchmark.c \
