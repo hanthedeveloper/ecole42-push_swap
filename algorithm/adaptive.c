@@ -6,14 +6,15 @@
 /*   By: haincel <haincel@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/14 16:31:40 by haincel           #+#    #+#             */
-/*   Updated: 2026/09/14 21:45:18 by haincel          ###   ########.fr       */
+/*   Updated: 2026/09/15 17:58:37 by haincel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "algorithm.h"
 #include "../benchmark/benchmark.h"
 
-void	adaptive(t_linkedlist **a, t_linkedlist **b, double disorder, t_bench *pointer)
+void	adaptive(t_linkedlist **a, t_linkedlist **b, double disorder,
+	t_bench *pointer)
 {
 	if (disorder < 0.2)
 	{
@@ -28,6 +29,6 @@ void	adaptive(t_linkedlist **a, t_linkedlist **b, double disorder, t_bench *poin
 	else
 	{
 		pointer->adaptive_strategy = "O(n log n)";
-		// complex(a, b);
+		complex(a, b);
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: haincel <haincel@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/14 12:52:46 by haincel           #+#    #+#             */
-/*   Updated: 2026/09/14 18:00:59 by haincel          ###   ########.fr       */
+/*   Updated: 2026/09/15 14:55:20 by haincel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	sa(t_linkedlist *a);
 void	sb(t_linkedlist *b);
 void	ss(t_linkedlist *a, t_linkedlist *b);
 
-void	pa(t_linkedlist **a, t_linkedlist **b);
+void	pa(t_linkedlist **b, t_linkedlist **a);
 void	pb(t_linkedlist **a, t_linkedlist **b);
 
 void	ra(t_linkedlist **a);

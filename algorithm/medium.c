@@ -6,7 +6,7 @@
 /*   By: haincel <haincel@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/14 12:51:56 by haincel           #+#    #+#             */
-/*   Updated: 2026/09/14 21:33:13 by haincel          ###   ########.fr       */
+/*   Updated: 2026/09/15 17:59:15 by haincel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ void	medium(t_linkedlist **a, t_linkedlist **b)
 	size = ft_lstsize(*a);
 	chunk_size = ft_sqrt(size);
 	i = 0;
-	while (*a)
+	while (*a) // 0,1,2  3,4,5 
 	{
 		if ((*a)->rank <= i)
 		{
@@ -106,7 +106,5 @@ void	medium(t_linkedlist **a, t_linkedlist **b)
 			ra(a);
 	}
 	while (*b)
-	{
 		push_max_to_a(a, b);
-	}
 }

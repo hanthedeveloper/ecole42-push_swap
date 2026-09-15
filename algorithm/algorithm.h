@@ -6,7 +6,7 @@
 /*   By: haincel <haincel@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/14 12:51:49 by haincel           #+#    #+#             */
-/*   Updated: 2026/09/14 19:54:26 by haincel          ###   ########.fr       */
+/*   Updated: 2026/09/15 17:58:58 by haincel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 
 void	simple(t_linkedlist **a, t_linkedlist **b);
 void	medium(t_linkedlist **a, t_linkedlist **b);
-void	adaptive(t_linkedlist **a, t_linkedlist **b, double disorder, t_bench *pointer);
+void	adaptive(t_linkedlist **a, t_linkedlist **b,
+	double disorder, t_bench *pointer);
+void	complex(t_linkedlist **a, t_linkedlist **b);
 
 #endif

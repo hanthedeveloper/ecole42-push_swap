@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: haincel <haincel@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/12 15:11:26 by haincel           #+#    #+#             */
-/*   Updated: 2026/09/14 21:44:56 by haincel          ###   ########.fr       */
+/*   Created: 2026/09/15 12:26:06 by haincel           #+#    #+#             */
+/*   Updated: 2026/09/15 17:20:15 by haincel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ static void	call_flag(int flag_index, int bench, t_linkedlist **a,
 		simple(a, b);
 	if (flag_index == 2)
 		medium(a, b);
+	if (flag_index == 3)
+		complex(a, b);
 	if (bench == 1)
 		print_bench();
 }

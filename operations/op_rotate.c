@@ -14,31 +14,36 @@
 
 /* gorevı : stackı cevırıyor. poınterım artık bı sonrakını
 gosterdıgı ıcın teknık olarak cevrılmıs oldu. */
-static void	rotate(t_linkedlist **stack)
+static int	rotate(t_linkedlist **stack)
 {
 	if (!stack || !*stack || (*stack)->next == *stack)
-		return ;
+		return (1);
 	*stack = (*stack)->next;
+	return (0);
 }
 
 void	ra(t_linkedlist **a)
-{
-	rotate(a);
-	ft_printf(1, "ra\n");
-	get_bench_pointer()->op_counter[op_ra]++;
+{	if (!rotate(a))
+	{
+		ft_printf(1, "ra\n");
+		get_bench_pointer()->op_counter[op_ra]++;
+	}
 }
 
 void	rb(t_linkedlist **b)
 {
-	rotate(b);
-	ft_printf(1, "rb\n");
-	get_bench_pointer()->op_counter[op_rb]++;
+	if (!rotate(b))
+	{
+		ft_printf(1, "rb\n");
+		get_bench_pointer()->op_counter[op_rb]++;
+	}
 }
 
 void	rr(t_linkedlist **a, t_linkedlist **b)
 {
-	rotate(a);
-	rotate(b);
-	ft_printf(1, "rr\n");
-	get_bench_pointer()->op_counter[op_rr]++;
+	if (!rotate(a) && !rotate(b))
+	{
+		ft_printf(1, "rr\n");
+		get_bench_pointer()->op_counter[op_rr]++;
+	}
 }

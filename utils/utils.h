@@ -6,7 +6,7 @@
 /*   By: haincel <haincel@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/09 11:23:33 by haincel           #+#    #+#             */
-/*   Updated: 2026/09/14 21:38:22 by haincel          ###   ########.fr       */
+/*   Updated: 2026/09/15 13:20:05 by haincel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ double	disorder_calculator(t_linkedlist *stack);
 void	check_double(t_linkedlist **a);
 long	ft_atoi(const char *str, int *i, t_linkedlist **a);
 
-void	create_stack_a(char *str, t_linkedlist **a)
+void	create_stack_a(char *str, t_linkedlist **a);
 
 void	check_overlap(int flag_index1, int flag_index2, int *strategy, int *bench);
 void	collect_flags(char **argv, int *idx1, int *idx2, int *i);

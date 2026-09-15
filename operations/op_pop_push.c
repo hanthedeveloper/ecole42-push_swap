@@ -21,12 +21,13 @@ static int	move(t_linkedlist **from, t_linkedlist **to)
 	int	rank;                    // <-- YENİ satır
 
 	if (!*from)
-		return ;
+		return (1);
 	rank = (*from)->rank;            // <-- YENİ satır (pop'tan ÖNCE, node silinmeden önce)
 	data = pop(from);
 	if (push(data, to) == -1)
 		ft_free_exit(from, to);
 	(*to)->rank = rank;               // <-- YENİ satır (push'tan SONRA)
+	return (0);
 }
 
 /* pa (push a): Take the first element at the top of b and
@@ -35,7 +36,7 @@ pb (push b): Take the first element at the top of a and
 put it at the top of b. Do nothing if a is empty */
 void	pa(t_linkedlist **b, t_linkedlist **a)
 {
-	if (move(b, a))
+	if (!move(b, a))
 	{
 		ft_printf(1, "pa\n");
 		get_bench_pointer()->op_counter[op_pa]++;
@@ -44,7 +45,9 @@ void	pa(t_linkedlist **b, t_linkedlist **a)
 
 void	pb(t_linkedlist **a, t_linkedlist **b)
 {
-	move(a, b);
-	ft_printf(1, "pb\n");
-	get_bench_pointer()->op_counter[op_pb]++;
+	if (!move(a, b))
+	{
+		ft_printf(1, "pb\n");
+		get_bench_pointer()->op_counter[op_pb]++;
+	}
 }

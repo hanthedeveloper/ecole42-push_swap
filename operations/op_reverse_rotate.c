@@ -13,31 +13,35 @@
 #include "operations.h"
 /* gorevı : stackı cevırıyor. poınterım artık bı oncekını gosterdıgı
 ıcın teknık olarak cevrılmıs oldu. */
-static void	reverse_rotate(t_linkedlist **stack)
+static int	reverse_rotate(t_linkedlist **stack)
 {
 	if (!stack || !*stack || (*stack)->next == *stack)
-		return ;
+		return (1);
 	*stack = (*stack)->prev;
+	return (0);
 }
 
 void	rra(t_linkedlist **a)
 {
-	reverse_rotate(a);
-	ft_printf(1, "rra\n");
-	get_bench_pointer()->op_counter[op_rra]++;
+	if (!reverse_rotate(a))
+	{
+		ft_printf(1, "rra\n");
+		get_bench_pointer()->op_counter[op_rra]++;
+	}
 }
 
 void	rrb(t_linkedlist **b)
-{
-	reverse_rotate(b);
-	ft_printf(1, "rrb\n");
-	get_bench_pointer()->op_counter[op_rrb]++;
+{	if (!reverse_rotate(b))
+	{
+		ft_printf(1, "rrb\n");
+		get_bench_pointer()->op_counter[op_rrb]++;
+	}
 }
 
 void	rrr(t_linkedlist **a, t_linkedlist **b)
-{
-	reverse_rotate(a);
-	reverse_rotate(b);
-	ft_printf(1, "rrr\n");
-	get_bench_pointer()->op_counter[op_rrr]++;
+{	if (!reverse_rotate(a) && !reverse_rotate(b))
+	{
+		ft_printf(1, "rrr\n");
+		get_bench_pointer()->op_counter[op_rrr]++;
+	}
 }

@@ -6,7 +6,7 @@
 /*   By: haincel <haincel@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/14 12:52:51 by haincel           #+#    #+#             */
-/*   Updated: 2026/09/14 18:01:11 by haincel          ###   ########.fr       */
+/*   Updated: 2026/09/15 15:15:24 by haincel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,12 +71,4 @@ int	pop(t_linkedlist **stack)
 	tail->next = *stack;
 	free(temp);
 	return (popdata);
-}
-
-/* stack yapısındakı en tepedekı datayı dondurur */
-int	peek(t_linkedlist **stack)
-{
-	if (!stack || !*stack)
-		return (0); // burda da
-	return ((*stack)->data);
 }
