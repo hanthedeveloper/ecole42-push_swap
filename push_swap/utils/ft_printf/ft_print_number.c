@@ -34,9 +34,6 @@ int	ft_putnbr_fd(int number, int fd)
 	return (len);
 }
 
-/* double yazdırmıyor da sayıyı once 10000 carparak ınteger a donusturuyor.
-sonra sayının ılk kısmını putnbr ıle yazdırıp araya 
-"." koyup ıkıncı kısmını yazdırıyor.*/
 int	ft_putdouble_fd(double number, int fd)
 {
 	int	len;
